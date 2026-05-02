@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #1e293b;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+}
+
+.hero button {
+  padding: 12px 20px;
+  border: none;
+  background: white;
+  color: #3b82f6;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Content */
+.content {
+  padding: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e293b;
+  color: white;
+}
