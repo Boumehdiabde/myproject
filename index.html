@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>boumehdi abde ldjalili</title>
+  <title>django_polls Documentation</title>
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/index.css">
@@ -14,49 +14,63 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar">
-  <h2>Website development</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Docs</a>
-    <a href="#">GitHub</a>
+<header class="navbar">
+  <div class="container nav-content">
+    <h2>django_polls</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#docs">Docs</a>
+      <a href="https://github.com">GitHub</a>
+    </nav>
   </div>
-</nav>
+</header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1>BOUMEHDIABDE LDJALIL</h1>
-  <p>Modern Django application documentation with clean UI</p>
-  <button onclick="scrollToDocs()">Get Started</button>
-</section>
-
-<!-- Content -->
-<section class="content" id="docs">
-  <h2>Documentation</h2>
-  <p>
-    Add your content using <strong>reStructuredText</strong> syntax.
-  </p>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Installation</h3>
-      <p>Learn how to install the project step by step.</p>
-    </div>
-
-    <div class="card">
-      <h3>Usage</h3>
-      <p>Understand how to use the application.</p>
-    </div>
-
-    <div class="card">
-      <h3>API</h3>
-      <p>Explore endpoints and integrations.</p>
-    </div>
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>django_polls Documentation</h1>
+    <p>Modern, clean and lightweight Django documentation UI</p>
+    <button onclick="document.getElementById('docs').scrollIntoView({behavior:'smooth'})">
+      Get Started
+    </button>
   </div>
 </section>
+
+<!-- Docs -->
+<section class="section" id="docs">
+  <div class="container">
+
+    <h2>Documentation</h2>
+    <p class="subtitle">
+      Everything you need to install and use the project.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>🚀 Installation</h3>
+        <p>Step-by-step guide to install and setup the project locally.</p>
+      </div>
+
+      <div class="card">
+        <h3>📘 Usage</h3>
+        <p>Learn how to use django_polls features effectively.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔌 API</h3>
+        <p>Endpoints, authentication and integration details.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
-<footer>
-  <p>© 2026 boumehdi | Copyright and advertising rights remain with their respective owners</p>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 django_polls | Built with ❤️</p>
+  </div>
 </footer>
 
 <script src="js/index.js"></script>
