@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>boumehdi abde ldjalili</title>
+  <meta name="description" content="Boumehdi Abde Ldjalil - Modern website development and documentation">
+  <meta property="og:title" content="Boumehdi Abde Ldjalil">
+  <meta property="og:description" content="Modern, clean and lightweight documentation UI">
+  <meta property="og:type" content="website">
+  
+  <title>Boumehdi Abde Ldjalil | Website Development</title>
 
-  <!-- Font -->
+  <!-- Font with font-display for better performance -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -16,11 +20,11 @@
 <!-- Navbar -->
 <header class="navbar">
   <div class="container nav-content">
-    <h2>Website development</h2>
+    <h1>Website Development</h1>
     <nav>
       <a href="#home">Home</a>
       <a href="#docs">Docs</a>
-      <a href="https://github.com">GitHub</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
 </header>
@@ -28,25 +32,19 @@
 <!-- Hero -->
 <section class="hero" id="home">
   <div class="container">
-    <h1>BOUMEHDI ABDE LDJALIL</h1>
+    <h2>BOUMEHDI ABDE LDJALIL</h2>
     <p>Modern, clean and lightweight Django documentation UI</p>
-    <button onclick="document.getElementById('docs').scrollIntoView({behavior:'smooth'})">
-      Get Started
-    </button>
+    <button class="btn-primary" id="getStartedBtn">Get Started</button>
   </div>
 </section>
 
 <!-- Docs -->
 <section class="section" id="docs">
   <div class="container">
-
     <h2>Documentation</h2>
-    <p class="subtitle">
-      Everything you need to install and use the project.
-    </p>
+    <p class="subtitle">Everything you need to install and use the project.</p>
 
     <div class="grid">
-
       <div class="card">
         <h3>🚀 Installation</h3>
         <p>Step-by-step guide to install and setup the project locally.</p>
@@ -61,7 +59,6 @@
         <h3>🔌 API</h3>
         <p>Endpoints, authentication and integration details.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -69,10 +66,10 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <p>© 2026 Boumehdi abde ldjalil |Copyright and advertising rights remain with their respective owners </p>
+    <p>&copy; 2026 Boumehdi Abde Ldjalil. All rights reserved.</p>
   </div>
 </footer>
 
-<script src="js/index.js"></script>
+<script src="js/index.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // 🔹 Smooth scroll لكل الروابط
+  // Smooth scroll for all anchor links
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -11,38 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 🔹 زر الرجوع للأعلى
+  // Get Started button handler
+  const getStartedBtn = document.getElementById("getStartedBtn");
+  if (getStartedBtn) {
+    getStartedBtn.addEventListener("click", function () {
+      document.getElementById("docs").scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+  // Back to top button
   const topBtn = document.createElement("button");
   topBtn.innerText = "↑";
   topBtn.id = "topBtn";
+  topBtn.setAttribute("aria-label", "Back to top");
   document.body.appendChild(topBtn);
 
-  topBtn.style.position = "fixed";
-  topBtn.style.bottom = "20px";
-  topBtn.style.right = "20px";
-  topBtn.style.padding = "10px 15px";
-  topBtn.style.borderRadius = "50%";
-  topBtn.style.border = "none";
-  topBtn.style.background = "#3b82f6";
-  topBtn.style.color = "white";
-  topBtn.style.cursor = "pointer";
-  topBtn.style.display = "none";
-
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
 
   topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // 🔹 تأثير ظهور الكروت (Animation on scroll)
+  // Card animation on scroll
   const cards = document.querySelectorAll(".card");
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
