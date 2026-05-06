@@ -56,20 +56,59 @@ body {
 
 /* Hero */
 .hero {
-  text-align: center;
   padding: 80px 20px;
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
 
-.hero h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin: 20px 0;
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.hero p {
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 20px 0;
+}
+
+.hero-text p {
   font-size: 1.1rem;
   margin-bottom: 30px;
   opacity: 0.9;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+  animation: float 3s ease-in-out infinite;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Buttons */
@@ -119,12 +158,14 @@ body {
 .section h2 {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .subtitle {
   opacity: 0.7;
   margin-bottom: 40px;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 /* Grid & Cards */
@@ -189,6 +230,15 @@ body {
     padding: 60px 20px;
   }
 
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .profile-img {
+    max-width: 280px;
+  }
+
   .section {
     padding: 60px 20px;
   }
@@ -203,17 +253,21 @@ body {
 }
 
 @media (max-width: 480px) {
-  .hero h2 {
+  .hero-text h2 {
     font-size: 1.5rem;
   }
 
-  .hero p {
+  .hero-text p {
     font-size: 1rem;
   }
 
   .btn-primary {
     padding: 10px 20px;
     font-size: 0.95rem;
+  }
+
+  .profile-img {
+    max-width: 220px;
   }
 
   #topBtn {
